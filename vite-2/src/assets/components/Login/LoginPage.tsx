@@ -53,7 +53,7 @@ export const LoginPage: React.FC = () => {
         return Math.max(0, Math.ceil((parsed - Date.now()) / 1000));
       }
     } catch {
-      // ignore — defaults to 0 below
+      // ignore — defaults to 0 below  
     }
     return 0;
   });

@@ -1,7 +1,7 @@
 # Authentication & Authorization — Current State
 
 **Last verified:** 2026-09-15 against `auth-server/src/**` (Express + TypeScript + Drizzle + PostgreSQL) — Module 4 requirements routes included
-**Supersedes:** `AUTHENTICATION_AUTHORIZATION_STATUS.md` (2026-09-07) and `AUTHORIZATION_PROGRESS.md` (2026-09-09), retained as historical appendices — see Appendix A.
+**Supersedes:** the removed 2026-09-07 (`..._STATUS.md`) and 2026-09-09 (`AUTHORIZATION_PROGRESS.md`) snapshots. This is the single current authentication/authorization document.
 **Scope:** `auth-server/src/routes/*.routes.ts`, `controllers/*`, `services/auth.service.ts`, `token.service.ts`, `otp.service.ts`, `authorization.service.ts`, `authorization.policy.ts`, `middleware/*`, `types/auth.types.ts`, `test/authorization.policy.test.js`.
 
 ---
@@ -131,9 +131,13 @@ Tests: `test/authorization.policy.test.js` covers administrator bypass, manager 
 
 ---
 
-## Appendix A — superseded documents (historical)
+## Appendix A — document history
 
-- `AUTHENTICATION_AUTHORIZATION_STATUS.md` (2026-09-07): accurate at the time, but §§2.1–2.2 claim project guards are unwired and the migration unapplied. Project routes have since been wired (`project.routes.ts`). Permission count (9) predates the 5 Module 2 additions. Retained for history.
-- `AUTHORIZATION_PROGRESS.md` (2026-09-09): accurate at the time; “guards not wired into feature routes” and “implement project controllers and routes” items are now partially done for projects. Document/phase/report items remain open. Retained for history.
-- `FRONTEND_GAPS_VITE2_VS_VITE-UPDATED.md` (2026-09-07) §6 / line 69 claim “only auth + admin routes” is stale for projects; patched 2026-09-11.
-- `PMS_APP_SPEC.md` §§4–5/9–13 prototype contracts (`/api/login`, numeric ids, `System Analyst` roles) are legacy; see `PMS_APP_SPEC.md §15` for the active contract.
+The 2026-09-07 `AUTHENTICATION_AUTHORIZATION_STATUS.md` and 2026-09-09
+`AUTHORIZATION_PROGRESS.md` snapshots were removed; this file replaces both.
+Their only still-relevant caveat was that project guards had not been wired,
+which §3 now records as done.
+
+`PMS_APP_SPEC.md` §§4–5/9–13 contain legacy prototype contracts
+(`/api/login`, numeric ids, `System Analyst` roles); see `PMS_APP_SPEC.md §15`
+for the active contract.

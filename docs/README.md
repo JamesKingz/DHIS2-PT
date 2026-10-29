@@ -146,6 +146,13 @@ Open http://localhost:8025 to view locally delivered OTP messages.
 For a real email provider, configure `OTP_EMAIL_PROVIDER=resend`,
 `RESEND_API_KEY`, and `RESEND_FROM_EMAIL` instead.
 
+## Google Drive integration
+
+Drive is configured in `auth-server/.env`. See `DRIVE_ENV_SETUP.md` for how to
+create the OAuth or service-account credentials, find the Shared Drive/folder
+IDs, and verify the setup. Use `DRIVE_DISABLED=true` to run locally without
+Drive credentials. `DRIVE_API_TESTING.md` covers the endpoint test matrix.
+
 ## Password reset
 
 The login page includes a password reset flow. Reset tokens are stored only as

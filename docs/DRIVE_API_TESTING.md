@@ -6,7 +6,8 @@ Backend: `auth-server` · Auth model: **service account + Shared Drive** · Driv
 
 1. Google Cloud: Drive API enabled; service-account JSON key downloaded.
 2. MOH Shared Drive shared with the SA email as **Content Manager**.
-3. `auth-server/.env` (never commit the key):
+3. `auth-server/.env` (never commit the key). See `DRIVE_ENV_SETUP.md` for how
+   to obtain each value:
    ```env
    DRIVE_DISABLED=false
    DRIVE_SHARED_DRIVE_ID=<shared-drive-id>
@@ -15,6 +16,7 @@ Backend: `auth-server` · Auth model: **service account + Shared Drive** · Driv
    DRIVE_UPLOAD_MAX_BYTES=52428800
    ```
    Hosted envs can use `GOOGLE_SERVICE_ACCOUNT_JSON_B64` instead of the key file.
+   Personal Gmail setups can use the OAuth keys (`GOOGLE_OAUTH_*`) instead.
 4. DB migrated: `drizzle/drizzle/20260917000000_drive_folders/migration.sql` applied
    (`drive_folders` table).
 5. Server running: `npm run dev` (port 5000 by default).
